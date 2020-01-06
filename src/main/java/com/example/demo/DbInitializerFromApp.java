@@ -22,7 +22,7 @@ public class DbInitializerFromApp {
 
     @PostConstruct
     public void createDbStructure() {
-        logger.info("add WORLD into db");
+        logger.info("add WORLDAPP into db");
         FakeInMemoryDb.data.put(HELLO, "WORLDAPP");
     }
     
