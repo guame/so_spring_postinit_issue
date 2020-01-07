@@ -20,10 +20,10 @@ public class MyConfig {
     @PostConstruct public void checkFlags() {
         logger.info("checking the flags");
         String flag;
-        flag = FakeInMemoryDb.data.get(DbInitializerFromApp.HELLO);
+        flag = FakeInMemoryDb.data.get(DbInitializerFromApp.DATA_FROM_APP);
         logger.info("checkFlag from current app: " + flag);
         
-        flag = FakeInMemoryDb.data.get(DbInitializerFromJar.HELLO);
+        flag = FakeInMemoryDb.data.get(DbInitializerFromJar.DATA_FROM_DEPENDENCY);
         logger.info("checkFlag from dependencies jar: " + flag);
         
     }

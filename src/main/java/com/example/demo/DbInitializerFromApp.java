@@ -18,12 +18,12 @@ import javax.annotation.PostConstruct;
 @Order(value = -1)
 public class DbInitializerFromApp {
     protected static Logger logger = LoggerFactory.getLogger(DbInitializerFromApp.class);
-    public static final String HELLO = "HELLOAPP";
+    public static final String DATA_FROM_APP = "DATA_FROM_APP";
 
     @PostConstruct
     public void createDbStructure() {
-        logger.info("add WORLDAPP into db");
-        FakeInMemoryDb.data.put(HELLO, "WORLDAPP");
+        logger.info("add {}} into db", DATA_FROM_APP);
+        FakeInMemoryDb.data.put(DATA_FROM_APP, DATA_FROM_APP);
     }
     
 }

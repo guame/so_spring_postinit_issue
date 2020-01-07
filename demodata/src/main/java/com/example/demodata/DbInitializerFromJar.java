@@ -17,12 +17,12 @@ import javax.annotation.PostConstruct;
 @Order(value = -1)
 public class DbInitializerFromJar {
     protected static Logger logger = LoggerFactory.getLogger(DbInitializerFromJar.class);
-    public static final String HELLO = "HELLO";
+    public static final String DATA_FROM_DEPENDENCY = "DATA_FROM_DEPENDENCY";
 
     @PostConstruct
     public void createDbStructure() {
-        logger.info("add WORLD into db");
-        FakeInMemoryDb.data.put(HELLO, "WORLD");
+        logger.info("add {}} into db", DATA_FROM_DEPENDENCY);
+        FakeInMemoryDb.data.put(DATA_FROM_DEPENDENCY, "DATA_FROM_DEPENDENCY");
     }
     
 }
