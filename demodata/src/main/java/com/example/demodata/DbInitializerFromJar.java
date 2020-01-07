@@ -21,7 +21,7 @@ public class DbInitializerFromJar {
 
     @PostConstruct
     public void createDbStructure() {
-        logger.info("add {}} into db", DATA_FROM_DEPENDENCY);
+        logger.info("add {} into db", DATA_FROM_DEPENDENCY);
         FakeInMemoryDb.data.put(DATA_FROM_DEPENDENCY, "DATA_FROM_DEPENDENCY");
     }
     

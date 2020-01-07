@@ -22,7 +22,7 @@ public class DbInitializerFromApp {
 
     @PostConstruct
     public void createDbStructure() {
-        logger.info("add {}} into db", DATA_FROM_APP);
+        logger.info("add {} into db", DATA_FROM_APP);
         FakeInMemoryDb.data.put(DATA_FROM_APP, DATA_FROM_APP);
     }
     
